@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400"
+     role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">dsh-wb-cron — DeepSeek Harness 无人值守定时任务插件</title>
+  <desc id="hero-desc">左侧为插件名与一句话说明：到点自动拉起一个全新的 root agent，在指定工作区把任务做完。右侧为真实的 cron 表达式 specimen：五个字段 30 8 * * 1-5 分别对应分/时/日/月/周，解析为「工作日 08:30 触发」，下方是调度器每 30 秒判定墙钟的时间轴，蓝色刻度即到点。</desc>
+
+  <defs>
+    <style>
+      .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Courier New', monospace; }
+    </style>
+  </defs>
+
+  <!-- 自带背景，保证在 GitHub 浅色 / 深色主题下都可读 -->
+  <rect width="1200" height="400" rx="20" fill="#0b0d10"/>
+  <rect x="0.5" y="0.5" width="1199" height="399" rx="20" fill="none" stroke="#232a33"/>
+
+  <!-- ══════════ 左：标识别 ══════════ -->
+  <g transform="translate(64 90)">
+    <circle cx="4" cy="-6" r="5" fill="#22a06b"/>
+    <text x="22" y="0" class="mono" font-size="18" letter-spacing="1.6" fill="#7c8899">DEEPSEEK HARNESS · 定时任务插件</text>
+
+    <text x="0" y="76" class="sans" font-size="64" font-weight="650" letter-spacing="-1.5" fill="#eef2f7">dsh-wb-cron</text>
+
+    <text x="0" y="132" class="sans" font-size="25" fill="#c2ccd8">到点自动拉起一个全新的 root agent，</text>
+    <text x="0" y="168" class="sans" font-size="25" fill="#c2ccd8">在指定工作区把任务做完</text>
+
+    <text x="0" y="218" class="mono" font-size="18" letter-spacing="0.2" fill="#7c8899">零 npm 运行时依赖 · 零遥测外发 · 会话落盘可续聊</text>
+  </g>
+
+  <!-- ══════════ 右：项目原生材料 —— 真实 cron specimen ══════════ -->
+  <g transform="translate(676 42)">
+    <rect width="460" height="316" rx="16" fill="#12151a" stroke="#28313c"/>
+    <text x="28" y="40" class="mono" font-size="18" letter-spacing="0.8" fill="#7c8899">cron 表达式</text>
+
+    <!-- 五个字段，位置与真实解析一致：30 8 * * 1-5 -->
+    <g transform="translate(28 58)">
+      <g>
+        <rect x="0" y="0" width="72" height="62" rx="10" fill="#0e1116" stroke="#232a33"/>
+        <text x="36" y="25" class="sans" font-size="18" fill="#6f7a88" text-anchor="middle">分</text>
+        <text x="36" y="51" class="mono" font-size="22" fill="#eef2f7" text-anchor="middle">30</text>
+      </g>
+      <g transform="translate(83 0)">
+        <rect x="0" y="0" width="72" height="62" rx="10" fill="#0e1116" stroke="#232a33"/>
+        <text x="36" y="25" class="sans" font-size="18" fill="#6f7a88" text-anchor="middle">时</text>
+        <text x="36" y="51" class="mono" font-size="22" fill="#eef2f7" text-anchor="middle">8</text>
+      </g>
+      <g transform="translate(166 0)">
+        <rect x="0" y="0" width="72" height="62" rx="10" fill="#0e1116" stroke="#232a33"/>
+        <text x="36" y="25" class="sans" font-size="18" fill="#6f7a88" text-anchor="middle">日</text>
+        <text x="36" y="51" class="mono" font-size="22" fill="#eef2f7" text-anchor="middle">*</text>
+      </g>
+      <g transform="translate(249 0)">
+        <rect x="0" y="0" width="72" height="62" rx="10" fill="#0e1116" stroke="#232a33"/>
+        <text x="36" y="25" class="sans" font-size="18" fill="#6f7a88" text-anchor="middle">月</text>
+        <text x="36" y="51" class="mono" font-size="22" fill="#eef2f7" text-anchor="middle">*</text>
+      </g>
+      <g transform="translate(332 0)">
+        <rect x="0" y="0" width="72" height="62" rx="10" fill="#0e1116" stroke="#2563eb"/>
+        <text x="36" y="25" class="sans" font-size="18" fill="#6f7a88" text-anchor="middle">周</text>
+        <text x="36" y="51" class="mono" font-size="21" fill="#eef2f7" text-anchor="middle">1-5</text>
+      </g>
+    </g>
+
+    <!-- 调度器时间轴：每 30s 一次墙钟判定，实心刻度即到点 -->
+    <g transform="translate(28 158)">
+      <line x1="0" y1="0" x2="404" y2="0" stroke="#232a33" stroke-width="1"/>
+      <g fill="#39424e">
+        <rect x="0" y="-4" width="1.5" height="8"/>
+        <rect x="40" y="-4" width="1.5" height="8"/>
+        <rect x="80" y="-4" width="1.5" height="8"/>
+        <rect x="121" y="-4" width="1.5" height="8"/>
+        <rect x="161" y="-4" width="1.5" height="8"/>
+        <rect x="242" y="-4" width="1.5" height="8"/>
+        <rect x="282" y="-4" width="1.5" height="8"/>
+        <rect x="323" y="-4" width="1.5" height="8"/>
+        <rect x="363" y="-4" width="1.5" height="8"/>
+        <rect x="403" y="-4" width="1.5" height="8"/>
+      </g>
+      <rect x="201" y="-9" width="2" height="18" fill="#2563eb"/>
+      <circle cx="202" cy="0" r="5" fill="#2563eb"/>
+      <text x="216" y="6" class="sans" font-size="18" fill="#2563eb">到点</text>
+    </g>
+    <text x="28" y="198" class="mono" font-size="18" fill="#6f7a88">调度器每 30s 判定墙钟</text>
+
+    <!-- 解析结果，真实来自 lib/cron.js -->
+    <text x="28" y="240" class="sans" font-size="22" fill="#eef2f7">工作日 08:30 触发</text>
+    <text x="28" y="270" class="mono" font-size="18" fill="#7c8899">下次 2026-09-23 08:30</text>
+    <circle cx="32" cy="294" r="4" fill="#22a06b"/>
+    <text x="44" y="300" class="mono" font-size="18" fill="#22a06b">调度器 · 运行中</text>
+  </g>
+</svg>
