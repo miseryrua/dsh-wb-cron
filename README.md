@@ -29,7 +29,7 @@ dsh plugin --profile web add "file:<本目录绝对路径>"
 dsh plugin --profile web add dsh-wb-cron
 
 # GitHub 来源（市场惯例：固定 commit 便于审查）
-dsh plugin --profile web add "github:<owner>/dsh-wb-cron#<sha>"
+dsh plugin --profile web add "github:miseryrua/dsh-wb-cron#<sha>"
 ```
 
 注意：`dsh plugin add` 仅把包装进 profile 的 `node_modules`；还需在
@@ -103,4 +103,6 @@ node --test          # 30 个测试（注意：必须用自动发现模式；nod
 
 ## License
 
-MIT
+MIT © 2026 miseryrua
+
+仓库：<https://github.com/miseryrua/dsh-wb-cron>（问题反馈请开 issue）
