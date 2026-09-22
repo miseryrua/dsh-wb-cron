@@ -39,6 +39,7 @@
   "files": [
     "lib",
     "test",
+    "assets",
     "cordis.patch.yml",
     "README.md"
   ],

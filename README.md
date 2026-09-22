@@ -2,6 +2,26 @@
 
 DeepSeek Harness（DSH）无人值守定时任务调度器插件：**到点自动在 web profile 进程内拉起全新 root agent，在指定工作区自主执行任务指令**。会话正常落盘、可在 Web 侧边栏续聊；无需子进程、无需单独凭据。
 
+## 界面预览
+
+主界面左下角有速览入口（运行角标 + 浮层面板），设置页里有完整管理卡片：
+
+| 侧边栏速览 | 设置 → 定时任务 |
+|---|---|
+| ![侧边栏速览面板](assets/screenshots/sidebar-panel.png) | ![设置页任务列表](assets/screenshots/settings-tasks.png) |
+
+编辑对话框：**Agent 预设**就在「模型」下方，任务可各自钉住 standard / ptc / minimal / cordis 或任意用户自建预设。列表行也会显示每个任务当前钉的预设。
+
+![编辑定时任务对话框](assets/screenshots/edit-dialog.png)
+
+新建任务默认「跟随全局默认」，也可以直接钉住某个预设：
+
+| 跟随全局默认（当前全局为 ptc） | 钉住「极简模式（minimal）」 |
+|---|---|
+| ![新建任务默认跟随全局默认](assets/screenshots/preset-default.png) | ![钉住极简模式](assets/screenshots/preset-minimal.png) |
+
+> 截图为演示数据。预设下拉的内容与「跟随全局默认」括号里的 id 都来自宿主当前实际安装的预设（`GET /dsh-wb-cron/presets`）。
+
 ## 核心特性
 
 - **进程内全栈继承**：agent 创建于 web profile 进程内，天然继承该 profile 的一切——模型路由（如 dsh-llm-agentrouter）、记忆注入（dsh-wb-memory）、skills、hooks。
