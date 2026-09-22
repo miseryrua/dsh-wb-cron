@@ -1,0 +1,18 @@
+# 内部设计 / 交接 / 调研文档（含本机绝对路径，不入库）
+docs/
+
+# 依赖与构建产物
+node_modules/
+dist/
+
+# 编辑器与系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 临时与备份文件
+*.log
+*.tmp
+*.bak
+*~

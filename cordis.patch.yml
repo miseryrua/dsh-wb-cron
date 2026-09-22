@@ -1,0 +1,4 @@
+# dsh-wb-cron bundle patch: inserts this plugin into a profile's layer stack.
+- insert:
+    - id: dsh-wb-cron
+      name: 'dsh-wb-cron'

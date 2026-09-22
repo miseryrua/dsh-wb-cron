@@ -1,0 +1,7 @@
+# 统一以 LF 存储，避免跨平台换行漂移
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.woff binary
+*.woff2 binary

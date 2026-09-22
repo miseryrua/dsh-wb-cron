@@ -1,0 +1,48 @@
+{
+  "name": "dsh-wb-cron",
+  "version": "0.2.0",
+  "description": "无人值守定时任务调度器：cron/固定间隔/一次性三种调度，到点在 web profile 进程内拉起全新 root agent 执行任务指令（全栈继承 agentrouter/wb-memory/skills/hooks），会话落盘可续聊；每任务可钉模型与 Agent 预设（预设被删/损坏时三级降级跑完并留痕）；提供 cron_* 模型工具、设置页完整管理与侧边栏速览。零 npm 运行时依赖、零遥测。",
+  "type": "module",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cron",
+    "scheduler",
+    "automation",
+    "agent-preset"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  },
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "test",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test"
+  }
+}
